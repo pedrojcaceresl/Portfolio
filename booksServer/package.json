@@ -1,0 +1,29 @@
+{
+  "name": "bookserver",
+  "version": "1.0.0",
+  "description": "This is an api for book titles",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "book",
+    "api",
+    "open"
+  ],
+  "author": "Pedro C.",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "morgan": "^1.10.0",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
