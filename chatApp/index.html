@@ -13,7 +13,7 @@
       }
       .container {
         height: 100vh;
-        background-color: rgb(39, 39, 39);
+        background-color: rgb(36, 36, 36);
         font-family: Arial, Helvetica, sans-serif;
         display: flex;
         flex-wrap: nowrap;
@@ -21,20 +21,29 @@
         justify-content: center;
         flex-direction: column;
       }
-      #message-container {
+      #message-container div {
+        margin: 5px;
+      }
+      #message-container div:nth-child(2n) {
+        background-color: rgb(48, 48, 48);
+        color: white;
+      }
+      #message-container div:last-child {
+        margin-bottom: 25px;
       }
       .message-ctnr {
         display: flex;
         width: 400px;
         height: 400px;
-        border: solid 1px rgb(255, 255, 255);
         padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 15px;
         overflow: auto;
       }
+      .chat {
+        border: solid 1px rgb(255, 255, 255);
+        padding: 20px;
+        border-radius: 10px;
+      }
       .message {
-        display: block;
         width: auto;
         background-color: rgb(190, 190, 190);
         padding: 8px;
@@ -73,15 +82,17 @@
   </head>
   <body>
     <div class="container">
-      <div class="message-ctnr">
-        <div id="message-container"></div>
-      </div>
-      <form id="send-container">
-        <div class="send">
-          <input type="text" id="message-input" />
-          <button class="btn" type="submit" id="send-button">Send</button>
+      <div class="chat">
+        <div class="message-ctnr">
+          <div id="message-container"></div>
         </div>
-      </form>
+        <form id="send-container">
+          <div class="send">
+            <input type="text" id="message-input" />
+            <button class="btn" type="submit" id="send-button">Send</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
